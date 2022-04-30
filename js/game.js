@@ -162,7 +162,7 @@ function swap() {
     direction = !direction;
     ship.scale.x = -ship.scale.x;
     fireMode = 3;
-    ion.sound.play("swap");
+    //ion.sound.play("swap");
     return false;
 }
 
