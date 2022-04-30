@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Corsairs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="MobileOptimized" content="176" />
+        <meta name="HandheldFriendly" content="True" />
+        <link rel="stylesheet" href="./style.css" />
+
+        <script src="webxdc.js"></script>
+        <script async type="module" src="./js/game.js"></script>
+    </head>
+    <body class="results_show" onload="window.loaded = 1;if (window.onLoad) window.onLoad()">
+        <div id="results" class="results">
+            <img class="logo" src="images/logo.svg">
+            <div class="stats">
+                <div class="you_scored">You scored</div>
+                <div class="score_num"><span id="score_val"></span><div class="score_coin"></div></div>
+            </div>
+            <div class="top_table">
+                <div id="scores_table">
+                    <div class="scores_loading">No high scores yet...</div>
+                </div>
+            </div>
+        </div>
+        <div id="game" class="game"></div>
+    </body>
+</html>

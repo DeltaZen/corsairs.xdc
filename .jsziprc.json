@@ -1,0 +1,21 @@
+{
+    "compressionLevel": 9,
+    "dereferenceLinks": true,
+    "entries": [
+        "dist/assets",
+        "dist/index.html",
+        "images",
+        "sounds",
+        "icon.png",
+        "manifest.toml"
+    ],
+    "force": true,
+    "ignoreEntries": [
+        "*.map",
+        "images/logo.svg"
+    ],
+    "mode": "add",
+    "outputEntry": "corsairs.xdc",
+    "quiet": false,
+    "verbose": false
+}

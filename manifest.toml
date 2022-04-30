@@ -1,0 +1,9 @@
+name="Corsairs v1.0"
+
+[store]
+id="com.github.adbenitez.corsairs"
+version_name=1.0
+version_code=1
+author="adbenitez"
+author_email="adbenitez@nauta.cu"
+description="Dodge the cannonballs and collect the gold to get to the next level."
