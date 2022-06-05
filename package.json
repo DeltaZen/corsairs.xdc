@@ -1,14 +1,12 @@
 {
-    "name": "corsairs",
     "private": true,
-    "version": "1.0.0",
     "scripts": {
         "dev": "vite --open",
-        "build": "vite build && pnpx jszip-cli -c .jsziprc.json",
+        "build": "vite build && jszip-cli -c .jsziprc.json",
         "preview": "vite preview"
     },
     "devDependencies": {
-        "vite": "^2.9.5",
-        "@ffflorian/jszip-cli": "^3.1.6"
+        "@ffflorian/jszip-cli": "^3.1.6",
+        "vite": "^2.9.5"
     }
 }
