@@ -2,11 +2,11 @@
     "private": true,
     "scripts": {
         "dev": "vite --open",
-        "build": "vite build && jszip-cli -c .jsziprc.json",
+        "build": "vite build && jszip-cli -c jszip.config.json",
         "preview": "vite preview"
     },
     "devDependencies": {
         "@ffflorian/jszip-cli": "^3.1.6",
-        "vite": "^2.9.5"
+        "vite": "^2.9.9"
     }
 }

@@ -15,7 +15,7 @@
         "images/logo.svg"
     ],
     "mode": "add",
-    "outputEntry": "corsairs.xdc",
+    "outputEntry": "dist/corsairs.xdc",
     "quiet": false,
     "verbose": false
 }
