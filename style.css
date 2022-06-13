@@ -61,7 +61,7 @@ canvas {
     height: 0.7em;
     width: 0.7em;
     display: inline-block;
-    background: url(images/coin_big.png) center center;
+    background: url(images/coin.svg) center center;
     background-size: 100% 100%;
     background-position: center center;
     z-index: 100;
