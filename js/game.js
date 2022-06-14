@@ -326,37 +326,8 @@ function die() {
         cham.fadeOut(ship, 30);
     }, 800)
     setTimeout(stop, 2000);
-    const addr = window.webxdc.selfAddr;
-    if (score > getHighscore(addr)) {
-        const name = window.webxdc.selfName;
-        const info = name + " scored " + score + " in Corsairs";
-        window.webxdc.sendUpdate(
-            {
-                payload: {
-                    addr: addr,
-                    name: name,
-                    score: score,
-                },
-                info: info,
-            },
-            info
-        );
-    }
+    window.highscores.setScore(score);
     ion.sound.play("explosion");
-}
-
-function updateTable() {
-    let table_html = '';
-    let table = getHighscores();
-    for (let i = 0; i < table.length; i++) {
-        let row = table[i];
-        table_html += '<div class="row' + (row.current ? ' you' : '') + '">'
-            +    '<span class="row_place">' + (i+1) + '.&nbsp;&nbsp;</span>'
-            +    '<span class="row_name">'+row.name+'</span>'
-            +    '<span class="row_score">' + row.score + '</span>'
-            +  '</div>';
-    }
-    ge('scores_table').innerHTML = table_html;
 }
 
 function loadImages(files, cb) {
@@ -852,17 +823,6 @@ function main() {
     })
     renderer.render(stage);
 
-
-    window.webxdc.setUpdateListener((update) => {
-        const player = update.payload;
-        if (player.score > getHighscore(player.addr)) {
-            PLAYERS[player.addr] = { name: player.name, score: player.score };
-        }
-        if (update.serial === update.max_serial && !started) {
-            updateTable();
-        }
-    }, 0);
-
     document.onkeydown = function(e) {
         let key = e.which || e.keyCode;
         if (key == 40 || key == 38 || key == 32) {
@@ -871,20 +831,8 @@ function main() {
             swap();
         }
     }
+
+    window.highscores.init("Corsairs", "scores_table");
 }
 
-
-function getHighscores() {
-    return Object.keys(PLAYERS).map((addr) => {
-        return {...PLAYERS[addr], current: addr === window.webxdc.selfAddr};
-    }).sort((a, b) => b.score - a.score);
-}
-
-function getHighscore(addr) {
-    return PLAYERS[addr] ? PLAYERS[addr].score : 0;
-}
-
-window.onLoad = main;
-if (window.loaded) {
-    main();
-}
+window.addEventListener("load", main);

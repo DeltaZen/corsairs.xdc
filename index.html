@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="./style.css" />
 
         <script src="webxdc.js"></script>
-        <script async type="module" src="./js/game.js"></script>
+        <script type="module" src="./js/webxdc-scores.js"></script>
     </head>
-    <body class="results_show" onload="window.loaded = 1;if (window.onLoad) window.onLoad()">
+    <body class="results_show">
         <div id="results" class="results">
             <img class="logo" src="images/logo.svg">
             <div class="stats">
@@ -27,5 +27,6 @@
             </div>
         </div>
         <div id="game" class="game"></div>
+        <script type="module" src="./js/game.js"></script>
     </body>
 </html>

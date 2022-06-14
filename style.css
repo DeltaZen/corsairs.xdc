@@ -71,7 +71,7 @@ canvas {
     margin-top: 10%;
     padding-bottom: 5%;
 }
-.row {
+.score-row {
     font-size: 120%;
     color: #4D4D4D;
     text-align: left;
@@ -80,18 +80,18 @@ canvas {
     border-radius: 2%;
     border-radius: 0.3em;
 }
-.row.you {
+.score-row.you {
     background: #FFFFFF;
 }
-.row_place {
+.row-pos {
     float: left;
     color: #88A0A6;
 }
-.row_score {
+.row-score {
     float: right;
     display: inline-block;
 }
-.row_name {
+.row-name {
     text-overflow: ellipsis;
     display: inline-block;
     width: 65%;
